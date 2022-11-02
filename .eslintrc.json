@@ -1,0 +1,41 @@
+{
+  "plugins": ["react-hooks", "import-helpers"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
+      }
+    ],
+    "react-hooks/exhaustive-deps": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          [
+            "/^components/",
+            "/^constants/",
+            "/^helpers/",
+            "/^hooks/",
+            "/^interfaces/",
+            "/^layout/",
+            "/^locales/",
+            "/^models/",
+            "/^redux/",
+            "/^routes/",
+            "/^services/",
+            "/^styles/",
+            "/^views/",
+            "/^context/"
+          ],
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
+  }
+}
