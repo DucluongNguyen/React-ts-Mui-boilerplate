@@ -1,10 +1,9 @@
 import React from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import LoadingScreenLib from "react-loading-screen";
 
-type Props = {};
-
-const LoadingScreen = (props: any) => {
+const LoadingScreen = () => {
   return (
     <LoadingScreenLib
       loading={true}

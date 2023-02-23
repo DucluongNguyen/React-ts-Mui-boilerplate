@@ -6,7 +6,6 @@ import {
   DialogProps,
   DialogTitle,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import * as React from "react";
 
 interface Props extends DialogProps {
@@ -19,7 +18,6 @@ interface Props extends DialogProps {
 
 export default function Dialog(props: Props) {
   // !State
-  const theme = useTheme();
   const { isOpen, toggle, title, content, footer } = props;
 
   return (

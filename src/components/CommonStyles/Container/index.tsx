@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import React, { ReactNode } from "react";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     width: "100%",
     padding: 8,

@@ -7,7 +7,7 @@ export interface IAppProps {
   children: React.ReactNode;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     textDecoration: "none",
     color: "inherit",

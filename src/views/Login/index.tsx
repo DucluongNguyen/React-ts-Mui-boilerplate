@@ -44,8 +44,12 @@ const LoginPage = () => {
           username,
           password,
           callbacks: {
-            onSuccess: () => {},
-            onFailed: () => {},
+            onSuccess: () => {
+              console.log("hello");
+            },
+            onFailed: () => {
+              console.log("hello");
+            },
           },
         });
       }}

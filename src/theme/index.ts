@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createTheme } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 
@@ -47,12 +48,12 @@ declare module "@mui/material/styles" {
     };
   }
 
-  interface Theme extends CustomTheme {}
-  interface ThemeOptions extends CustomTheme {}
+  type Theme = CustomTheme;
+  type ThemeOptions = CustomTheme;
 }
 
 declare module "@mui/styles/defaultTheme" {
-  interface DefaultTheme extends Theme {}
+  type DefaultTheme = Theme;
 }
 
 const REM = 16;
@@ -169,48 +170,48 @@ export const theme = createTheme({
       },
     },
   },
-  custom: {
-    common: {
-      black: colors.black,
-      white: colors.white,
-      red: colors.red,
-      green: colors.green,
-      yellow: colors.yellow,
-      blue: colors.blue1,
-    },
-    font: {
-      size: {
-        subText: `${14 / REM}rem`,
-      },
-      colors: {
-        colorSubText1: colors.grey1,
-        colorText2: colors.grey,
-        colorText3: colors.green2,
-        colorText4: colors.purple9,
-        colorText5: colors.purple10,
-      },
-    },
-    background: {
-      main: `linear-gradient(180deg, #101718 0%, #3A2B92 100%, #3A2B92 100%)`,
-      secondary: colors.purple2,
-      third: colors.purple8,
-      fourth: colors.purple6,
-      header: colors.black2,
-      footer: colors.purple7,
-      badgeTab: colors.purple5,
-      badge: colors.purple4,
-    },
-    button: {
-      borderRadius: 24,
-      colorSecondary: colors.purple6,
-    },
-    border: {
-      borderColorSelected: colors.green2,
-      borderRadiusCircular: 20,
-      borderRadiusSquare: 4,
-      borderRadius16: 16,
-    },
-  },
+  // custom: {
+  //   common: {
+  //     black: colors.black,
+  //     white: colors.white,
+  //     red: colors.red,
+  //     green: colors.green,
+  //     yellow: colors.yellow,
+  //     blue: colors.blue1,
+  //   },
+  //   font: {
+  //     size: {
+  //       subText: `${14 / REM}rem`,
+  //     },
+  //     colors: {
+  //       colorSubText1: colors.grey1,
+  //       colorText2: colors.grey,
+  //       colorText3: colors.green2,
+  //       colorText4: colors.purple9,
+  //       colorText5: colors.purple10,
+  //     },
+  //   },
+  //   background: {
+  //     main: `linear-gradient(180deg, #101718 0%, #3A2B92 100%, #3A2B92 100%)`,
+  //     secondary: colors.purple2,
+  //     third: colors.purple8,
+  //     fourth: colors.purple6,
+  //     header: colors.black2,
+  //     footer: colors.purple7,
+  //     badgeTab: colors.purple5,
+  //     badge: colors.purple4,
+  //   },
+  //   button: {
+  //     borderRadius: 24,
+  //     colorSecondary: colors.purple6,
+  //   },
+  //   border: {
+  //     borderColorSelected: colors.green2,
+  //     borderRadiusCircular: 20,
+  //     borderRadiusSquare: 4,
+  //     borderRadius16: 16,
+  //   },
+  // },
   palette: {
     action: {
       active: "#6B7280",

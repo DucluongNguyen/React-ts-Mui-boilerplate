@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 
 import { useGetTodoInfinition } from "hooks/todos/useGetTodoList";

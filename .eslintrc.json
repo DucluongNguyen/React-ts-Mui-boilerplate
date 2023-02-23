@@ -1,10 +1,47 @@
 {
-  "plugins": ["react-hooks", "import-helpers", "@typescript-eslint"],
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import-helpers",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
   "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn"],
-    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "prettier/prettier": "warn",
+    "react/no-unknown-property": ["warn", { "ignore": ["css"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-console": "off",
     "no-restricted-syntax": [
       "error",
       {
@@ -13,6 +50,14 @@
       }
     ],
     "react-hooks/exhaustive-deps": "off",
+    "import/extensions": [
+      "off",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import-helpers/order-imports": [
       "warn",
       {

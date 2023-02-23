@@ -18,9 +18,14 @@ const HomePage: React.FC = () => {
       List Class
       <hr />
       <commonStyles.ScrollInfinition onLoadMore={fetchNextPage} isFetchingNextPage={isFetchingNextPage}>
-        {classList.map((el: any) => {
+        {classList.map((el: any, index: number) => {
           return el?.data.results.map(() => {
-            return <div style={{ width: "100px", height: "200px", background: "red", marginBottom: "10px" }}></div>;
+            return (
+              <div
+                key={index}
+                style={{ width: "100px", height: "200px", background: "red", marginBottom: "10px" }}
+              ></div>
+            );
           });
         })}
       </commonStyles.ScrollInfinition>

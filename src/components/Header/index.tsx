@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { makeStyles } from "@mui/styles";
 import classNames from "classnames";
 import React, { useMemo } from "react";
@@ -34,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
     background: "#fff",
     paddingLeft: PADDING_SIDE,
     paddingRight: PADDING_SIDE,
-    [theme.breakpoints.down("md")]: {
-      height: "100px",
-    },
   },
 }));
 
