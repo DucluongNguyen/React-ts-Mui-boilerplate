@@ -1,7 +1,9 @@
 {
-  "plugins": ["react-hooks", "import-helpers"],
+  "plugins": ["react-hooks", "import-helpers", "@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
     "no-console": "warn",
     "no-restricted-syntax": [
       "error",
@@ -31,6 +33,7 @@
             "/^services/",
             "/^styles/",
             "/^views/",
+            "/^reducer/",
             "/^context/"
           ],
           ["parent", "sibling", "index"]

@@ -22,3 +22,17 @@ export const useGetTodoInfinition = () => {
     }
   );
 };
+
+export const useGetClass = (page: Number) => {
+  return useInfiniteQuery(
+    "get class",
+    async ({ pageParam = 1 }) => await todosServices.getClassList(pageParam),
+
+    {
+      getNextPageParam: (lastPage: any, allPages: any) => {
+        return allPages.length + 1 <= lastPage.data.total_pages ? allPages.length + 1 : undefined;
+      },
+      onError: (error) => showSuccess(getErrorMsg(error)),
+    }
+  );
+};

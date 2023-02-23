@@ -1,14 +1,6 @@
-import { makeStyles } from "@mui/styles";
 import React, { ReactNode, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-const useStyles = makeStyles((theme) => ({
-  detection: {
-    // display: "flex",
-    // visibility: "hidden",
-    // height: "1px",
-  },
-}));
 type Props = {
   children: ReactNode;
   onLoadMore: () => void; //fetchNextPage()
@@ -17,7 +9,6 @@ type Props = {
 
 const ScrollInfinition = (props: Props) => {
   // !State
-  //   const classes = useStyles();
   const { children, onLoadMore, isFetchingNextPage } = props;
   const { ref, inView } = useInView();
 
@@ -30,7 +21,7 @@ const ScrollInfinition = (props: Props) => {
   return (
     <React.Fragment>
       {children}
-      <div ref={ref}>{isFetchingNextPage ? "Loading more ..." : ""}</div>
+      <div ref={ref}>{isFetchingNextPage ? "Loading ..." : ""}</div>
     </React.Fragment>
   );
 };

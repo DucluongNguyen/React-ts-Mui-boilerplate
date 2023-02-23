@@ -33,7 +33,8 @@ class Services {
       function (config) {
         if (config.headers) {
           // Do something before request is sent
-          config.headers.sessionId = token;
+          // config.headers.sessionId = token;
+          config.headers[`Authorization`] = `token ${token}`;
         }
         return config;
       },
